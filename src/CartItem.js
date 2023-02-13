@@ -9,7 +9,7 @@ class CartItem extends React.Component {
                                         <img style={styles.Image} />
                                 </div>
                                 <div className="right-block">
-                                        <div style={ {fontSize: 25} }>Phone</div>
+                                        <div style={ {fontSize: 25, color: "blue"} }>Phone</div>
                                         <div style={ {color: '#777'} }>Rs 999</div>
                                         <div style={ {color: '#777'} }>Qty: 1</div>
                                         <div className="cart-item-actions left-block">
