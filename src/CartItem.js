@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/alt-text */
+
 import React from "react";
 
 class CartItem extends React.Component {
@@ -11,9 +10,10 @@ class CartItem extends React.Component {
                         qty: 1,
                         img: ''
                 }
+                this.increaseQuantity = this.increaseQuantity.bind(this);
         }
-        increaseQuantity () {
-                console.log('testingclick');
+        increaseQuantity =  () => {
+                console.log('this', this.state);
 
         }
   render() {
@@ -46,6 +46,7 @@ class CartItem extends React.Component {
               className="action-icons"
               src="https://as2.ftcdn.net/v2/jpg/01/90/89/15/1000_F_190891550_N7uKp2aHE3mOc20dmtDytj7atgvbhdOu.jpg"
             />
+            
           </div>
         </div>
       </div>
