@@ -14,6 +14,7 @@ class CartItem extends React.Component {
                                         <div style={ {color: '#777'} }>Qty: 1</div>
                                         <div className="cart-item-actions left-block">
                                                 {/* Button */}
+                                                <img  />
                                                
                                         </div>
                                 </div>
