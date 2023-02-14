@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 
 import React from "react";
 
@@ -10,11 +11,13 @@ class CartItem extends React.Component {
                         qty: 1,
                         img: ''
                 }
-                this.increaseQuantity = this.increaseQuantity.bind(this);
+                //this.increaseQuantity = this.increaseQuantity.bind(this);
         }
         increaseQuantity =  () => {
-                console.log('this', this.state);
-
+                //console.log('this', this.state);
+                this.setState({
+                  qty: this.state.qty + 1
+                });
         }
   render() {
         
