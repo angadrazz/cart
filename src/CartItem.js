@@ -21,7 +21,7 @@ class CartItem extends React.Component {
         }
         decreaseQuantity = () => {
           this.setState({
-            qty: this.state.qty - 2
+            qty: this.state.qty - 1
           })
         }
   render() {
