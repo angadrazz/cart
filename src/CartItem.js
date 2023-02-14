@@ -1,17 +1,29 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 
 class CartItem extends React.Component {
+        constructor (){
+                super();
+                this.state = {
+                        price: 999,
+                        title: 'phone',
+                        qty: 1,
+                        img: ''
+                }
+        }
   render() {
+        
+        const { price, title, qty } = this.state;
     return (
       <div className="cart-item">
         <div className="left-block">
           <img style={styles.Image} />
         </div>
         <div className="right-block">
-          <div style={{ fontSize: 25, color: "blue" }}>Phone</div>
-          <div style={{ color: "#777" }}>Rs 999</div>
-          <div style={{ color: "#777" }}>Qty: 1</div>
+          <div style={{ fontSize: 25, color: "blue" }}>{title}</div>
+          <div style={{ color: "#777" }}>Rs {price}</div>
+          <div style={{ color: "#777" }}>Qty: {qty}</div>
           <div className="cart-item-actions left-block">
             {/* Button */}
             <img
