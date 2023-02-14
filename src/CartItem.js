@@ -14,7 +14,9 @@ class CartItem extends React.Component {
                                         <div style={ {color: '#777'} }>Qty: 1</div>
                                         <div className="cart-item-actions left-block">
                                                 {/* Button */}
-                                                <img  />
+                                                <img alt="increase" className="action-icons" src="https://as1.ftcdn.net/v2/jpg/03/30/25/74/1000_F_330257485_WEd8LDmLkdp4vbJjhbLY263gV0OvsiIF.jpg" />
+                                                <img alt="decrease" className="action-icons" src="https://as2.ftcdn.net/v2/jpg/02/44/39/19/1000_F_244391909_DfS5TL9Oyzhf4VW0v9gPq4FPDg3BtD9w.jpg" />
+                                                <img alt="delete" className="action-icons" src="https://as2.ftcdn.net/v2/jpg/01/90/89/15/1000_F_190891550_N7uKp2aHE3mOc20dmtDytj7atgvbhdOu.jpg" />
                                                
                                         </div>
                                 </div>
