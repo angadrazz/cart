@@ -9,6 +9,7 @@ class CartItem extends React.Component {
                         price: 999,
                         title: 'phone',
                         qty: 1,
+                        discount: 200,
                         img: ''
                 }
                 //this.increaseQuantity = this.increaseQuantity.bind(this);
@@ -21,7 +22,7 @@ class CartItem extends React.Component {
         }
   render() {
         
-        const { price, title, qty } = this.state;
+        const { price, title, qty, discount } = this.state;
     return (
       <div className="cart-item">
         <div className="left-block">
@@ -30,6 +31,7 @@ class CartItem extends React.Component {
         <div className="right-block">
           <div style={{ fontSize: 25, color: "blue" }}>{title}</div>
           <div style={{ color: "#777" }}>Rs {price}</div>
+          <div style={{ color: "#777" }}>Discount {discount}</div>
           <div style={{ color: "#777" }}>Qty: {qty}</div>
           <div className="cart-item-actions left-block">
             {/* Button */}
