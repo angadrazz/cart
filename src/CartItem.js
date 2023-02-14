@@ -12,6 +12,10 @@ class CartItem extends React.Component {
                         img: ''
                 }
         }
+        increaseQuantity () {
+                console.log('testingclick');
+
+        }
   render() {
         
         const { price, title, qty } = this.state;
@@ -30,6 +34,7 @@ class CartItem extends React.Component {
               alt="increase"
               className="action-icons"
               src="https://as1.ftcdn.net/v2/jpg/03/30/25/74/1000_F_330257485_WEd8LDmLkdp4vbJjhbLY263gV0OvsiIF.jpg"
+              onClick={this.increaseQuantity}
             />
             <img
               alt="decrease"
