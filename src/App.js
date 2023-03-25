@@ -2,8 +2,7 @@ import React from 'react';
 import Cart from './Cart';
 import Navbar from './Navbar';
 
-class App extends React.Component {
-
+class App extends React.Component() {
   constructor () {
     super();
     this.state = {
@@ -26,9 +25,16 @@ class App extends React.Component {
           price: 999,
           title: 'Laptop',
           qty: 4,
-          img: 'https://images.unsplash.com/photo-1504707748692-419802cf939d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1330&q=80',
+          img: '',
           id: 3
-        }
+        },
+        {
+            price: 789,
+            title: 'Tv ',
+            qty: 7,
+            img: '',
+            id: 3
+          }
       ]
     }
     // this.increaseQuantity = this.increaseQuantity.bind(this);
@@ -70,19 +76,25 @@ class App extends React.Component {
     })
   }
 
-  render () {
+  getCartCount = () => {
     const { products } = this.state;
-    return (
-      <div className="App">
-        <Navbar />
-        <Cart
-          products={products}
-          onIncreaseQuantity={this.handleIncreaseQuantity}
-          onDecreaseQuantity={this.handleDecreaseQuantity}
-          onDeleteProduct={this.handleDeleteProduct}
-        />
-      </div>
-    );
+    let count = 0;
+    products.forEach((product) => {
+      count += product.qty;
+
+    })
+  }
+  render (){
+    
+  return (
+    <div className="App">
+      <Navbar count={this.getCartCount()} />
+      <Cart 
+      onIncreaseQuantity={this.handleIncreaseQuantity}
+      onDecreaseQuantity={this.handleDecreaseQuantity}
+      onDeleteProduct={this.handleDeleteProduct}/>
+    </div>
+  );
   }
 }
 
