@@ -83,9 +83,6 @@ class Cart extends React.Component {
             <CartItem
               product={product}
               key={product.id}
-              onIncreaseQuantity={this.handleIncreaseQuantity}
-              onDecreaseQuantity={this.handleDecreaseQuantity}
-              onDeleteProduct={this.handleDeleteProduct}
             />
         
           )
