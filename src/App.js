@@ -78,14 +78,11 @@ class App extends React.Component() {
   render (){
   return (
     <div className="App">
+      <Navbar />
       <Cart 
       onIncreaseQuantity={this.handleIncreaseQuantity}
       onDecreaseQuantity={this.handleDecreaseQuantity}
-      onDeleteProduct={this.handleDeleteProduct}
-      />
-
-      <Navbar />
-      <Cart />
+      onDeleteProduct={this.handleDeleteProduct}/>
     </div>
   );
   }
